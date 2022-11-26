@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 1, 2022, 2:02:40 PM by Hibernate Tools 5.4.33.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="g_vente" name="mapping.Commandes" optimistic-lock="none" table="commandes">
+        <id name="codeCmd" type="java.lang.Integer">
+            <column name="codeCmd"/>
+            <generator class="identity"/>
+        </id>
+        <property name="client" type="string">
+            <column length="20" name="client" not-null="true"/>
+        </property>
+        <property name="codeArt" type="int">
+            <column name="codeArt" not-null="true"/>
+        </property>
+        <property name="qteCmd" type="int">
+            <column name="qteCmd" not-null="true"/>
+        </property>
+        <property name="dateCmd" type="date">
+            <column length="10" name="dateCmd" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

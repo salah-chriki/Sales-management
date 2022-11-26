@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 1, 2022, 2:02:40 PM by Hibernate Tools 5.4.33.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="g_stock" name="mapping.ArticlesApprovisionnement" optimistic-lock="none" table="articles_approvisionnement">
+        <id name="codeArt" type="int">
+            <column name="codeArt"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="qteCommande" type="int">
+            <column name="qteCommande" not-null="true"/>
+        </property>
+        <property name="datePrevueLivraison" type="date">
+            <column length="10" name="datePrevueLivraison" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 1, 2022, 2:02:40 PM by Hibernate Tools 5.4.33.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="g_stock" name="mapping.Articlesstock" optimistic-lock="none" table="articlesstock">
+        <id name="codeArt" type="java.lang.Integer">
+            <column name="codeArt"/>
+            <generator class="identity"/>
+        </id>
+        <property name="qteArt" type="int">
+            <column name="qteArt" not-null="true"/>
+        </property>
+        <property name="nomArt" type="string">
+            <column length="20" name="nomArt" not-null="true"/>
+        </property>
+        <property name="descArt" type="string">
+            <column length="200" name="descArt" not-null="true"/>
+        </property>
+        <property name="prixArt" type="int">
+            <column name="prixArt" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

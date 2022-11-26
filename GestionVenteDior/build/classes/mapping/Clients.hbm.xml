@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated Jun 1, 2022, 2:02:40 PM by Hibernate Tools 5.4.33.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="g_vente" name="mapping.Clients" optimistic-lock="none" table="clients">
+        <id name="codeClient" type="java.lang.Integer">
+            <column name="codeClient"/>
+            <generator class="identity"/>
+        </id>
+        <property name="nameClient" type="string">
+            <column length="20" name="nameClient" not-null="true"/>
+        </property>
+        <property name="emailClient" type="string">
+            <column length="45" name="emailClient" not-null="true"/>
+        </property>
+        <property name="addressClient" type="string">
+            <column length="45" name="addressClient" not-null="true"/>
+        </property>
+        <property name="telClient" type="string">
+            <column length="45" name="telClient" not-null="true"/>
+        </property>
+    </class>
+</hibernate-mapping>

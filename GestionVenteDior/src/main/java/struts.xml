@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts  
+Configuration 2.1//EN" "http://struts.apache.org/dtds/struts-2.1.dtd">  
+<struts>  
+
+<constant name="struts.devMode" value="true"/>
+<constant name="struts.action.extention" value="html"/>
+
+<package name="default" extends="struts-default" namespace="/">  
+  
+  
+
+<!-- Authentication -->
+  
+<!-- Sign up-->
+<action name="signup" class="controller.AuthenticationController" method="signup">  
+<result name="success">login.jsp</result> 
+<result name="error">signup.jsp?page=signup</result>   
+</action>  
+
+<!-- Log in-->
+<action name="login" class="controller.AuthenticationController" method="login">  
+<result name="success">products.jsp</result> 
+<result name="error">login.jsp</result>   
+</action>  
+
+<!-- sign up-->
+<action name="signup" class="controller.AuthenticationController" method="signup">  
+<result name="success">login.jsp</result> 
+<result name="error">signup.jsp</result>   
+</action>  
+
+<!-- Log out-->
+<action name="logout" class="controller.AuthenticationController" method="logout">  
+<result name="success">login.jsp</result>  
+</action>  
+
+
+<action name="changeUserPassword" class="controller.AuthenticationController" method="changeUserPassword">  
+<result name="success">login.jsp</result>  
+</action> 
+
+<!-- Orders Actions -->
+<!-- Add Order -->
+<action name="addOrderAction" class="controller.OrdersController" method="addOrder">
+<result name="success">orders.jsp</result>
+<result name="error">addOrders.jsp</result>
+</action>
+<!-- Display Orders -->
+<action name="orders" class="controller.OrdersController" >  
+<result name="success">orders.jsp</result>     
+</action>
+
+<action name="addorderloader" class="controller.OrdersController" method="addOrderLoader">  
+<result name="success">addOrder.jsp</result>     
+</action>
+
+<!-- Edit Order -->
+<action name="editOrder" class="controller.OrdersController" method="editOrder">  
+<result name="success">editOrder.jsp</result>     
+</action>
+
+<action name="editOrder2" class="controller.OrdersController" method="editOrder2">  
+<result name="success">orders.jsp</result>     
+</action>
+
+<!-- Delete Order -->
+<action name="deleteOrder" class="controller.OrdersController" method="deleteOrder">  
+<result name="success">orders.jsp</result>     
+</action>
+
+<!-- Receipt -->
+<action name="receipt" class="controller.ReceiptController" >  
+<result name="success">receipt.jsp</result>     
+</action>
+
+<!-- Display Products -->
+<action name="products" class="controller.ProductsController" method="displayProducts">  
+<result name="success">products.jsp</result>    
+</action> 
+
+<!-- Display Clients -->
+<action name="clients" class="controller.ClientsController"  method="displayClients">  
+<result name="success">clients.jsp</result>     
+</action>
+
+<!-- Delete Client -->
+<action name="deleteClient" class="controller.ClientsController" method="deleteClient">
+<result name="success">clients.jsp</result>
+</action>
+
+
+<!-- Add Client -->
+<action name="addClient" class="controller.ClientsController" method="addClient">  
+<result name="success">clients.jsp</result>    
+<result name="error">addClient.jsp</result>  
+</action> 
+
+<!-- Edit Client -->
+<action name="editClient" class="controller.ClientsController" method="editClient">  
+<result name="success">clients.jsp</result>    
+<result name="error">editClient.jsp</result>    
+</action> 
+
+<action name="editClientRedir" class="controller.ClientsController" method="redirect">  
+<result name="success">editClient.jsp</result>    
+</action> 
+
+
+
+
+
+
+
+
+
+
+
+
+  
+</package>  
+</struts>     
